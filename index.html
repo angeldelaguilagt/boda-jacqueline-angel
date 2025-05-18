@@ -82,6 +82,26 @@
     .event-image{width:100%;max-width:400px;border-radius:12px;margin-top:20px;box-shadow:0 4px 10px rgba(0,0,0,.1)}
 
     footer{text-align:center;padding:40px 20px;font-size:.95rem;color:#fff3e6;background:#bfa991;font-family:var(--font-main)}
+ /* ----- Calendario responsive ----- */
+@media (max-width:480px){
+  .calendar{
+    /* los 7 días deben caber; usamos celdas más flexibles */
+    grid-template-columns: repeat(7,minmax(0,1fr));
+    gap:6px;
+    padding:12px;
+  }
+  .day,
+  .day-name{
+    padding:8px 4px;      /* celdas más compactas */
+    font-size:.75rem;      /* texto más pequeño */
+  }
+  .header{
+    font-size:1.1rem;      /* título del mes más chico */
+    margin-bottom:4px;
+  }
+}
+
+  
   </style>
 </head>
 
