@@ -83,21 +83,40 @@
 
     footer{text-align:center;padding:40px 20px;font-size:.95rem;color:#fff3e6;background:#bfa991;font-family:var(--font-main)}
  /* ----- Calendario responsive ----- */
+
+/* ---------- Ajustes responsive (< 480 px) ---------- */
 @media (max-width:480px){
+
+  /* Calendario (del mensaje anterior) */
   .calendar{
-    /* los 7 días deben caber; usamos celdas más flexibles */
-    grid-template-columns: repeat(7,minmax(0,1fr));
+    grid-template-columns:repeat(7,minmax(0,1fr));
     gap:6px;
     padding:12px;
   }
-  .day,
-  .day-name{
-    padding:8px 4px;      /* celdas más compactas */
-    font-size:.75rem;      /* texto más pequeño */
+  .day,.day-name{
+    padding:8px 4px;
+    font-size:.75rem;
   }
   .header{
-    font-size:1.1rem;      /* título del mes más chico */
+    font-size:1.1rem;
     margin-bottom:4px;
+  }
+
+  /* Formulario RSVP */
+  form{
+    max-width:100%;          /* que use todo el ancho posible */
+    padding:1.2rem;
+    border-width:1px;
+  }
+  input,
+  select,
+  textarea{
+    font-size:.9rem;
+    padding:.6rem;
+  }
+  button{
+    font-size:.9rem;
+    padding:.6rem 1rem;
   }
 }
 
